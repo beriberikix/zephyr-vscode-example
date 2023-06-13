@@ -3,17 +3,33 @@
 	"tasks": [
 		{
 			"label": "West Build",
-			"type": "process",
-			"group": "build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"command": "${userHome}/code/zephyrproject/.venv/Scripts/west.exe",
 			"args": [
 				"build",
 				"-p",
 				"auto",
 				"-b",
-				"rpi_pico"
+				"adafruit_feather_m0_basic_proto"
 			],
-			"problemMatcher": ["$gcc"]
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "West Flash",
+			"type": "shell",
+			"command": "${userHome}/code/zephyrproject/.venv/Scripts/west.exe",
+			"args": [
+				"flash"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
 		}
 	]
 }
