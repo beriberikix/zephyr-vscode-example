@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools-extension-pack",
+        "ms-python.python",
+        "ms-vscode.vscode-embedded-tools",
+        "ms-vscode.vscode-serial-monitor"
+    ]
+}
