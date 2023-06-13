@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "West Build",
+			"type": "process",
+			"group": "build",
+			"command": "west",
+			"args": [
+				"build",
+				"-p",
+				"auto",
+				"-b",
+				"rpi_pico"
+			],
+			"problemMatcher": ["$gcc"]
+		}
+	]
+}
