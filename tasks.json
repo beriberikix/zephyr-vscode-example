@@ -5,7 +5,7 @@
 			"label": "West Build",
 			"type": "process",
 			"group": "build",
-			"command": "west",
+			"command": "${userHome}/code/zephyrproject/.venv/Scripts/west.exe",
 			"args": [
 				"build",
 				"-p",
