@@ -8,13 +8,41 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"command": "${userHome}/code/zephyrproject/.venv/Scripts/west.exe",
+			"linux": {
+				"command": "${userHome}/zephyrproject/.venv/bin/west"
+			},
+			"windows": {
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
+			},
 			"args": [
 				"build",
 				"-p",
 				"auto",
 				"-b",
-				"adafruit_feather_m0_basic_proto"
+				"nrf52840dk_nrf52840"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "West Configurable Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+			},
+			"linux": {
+				"command": "${userHome}/zephyrproject/.venv/bin/west"
+			},
+			"windows": {
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
+			},
+			"args": [
+				"build",
+				"-p",
+				"${input:pristine}",
+				"-b",
+				"${input:board}"
 			],
 			"problemMatcher": [
 				"$gcc"
@@ -23,12 +51,36 @@
 		{
 			"label": "West Flash",
 			"type": "shell",
-			"command": "${userHome}/code/zephyrproject/.venv/Scripts/west.exe",
+			"linux": {
+				"command": "${userHome}/zephyrproject/.venv/bin/west"
+			},
+			"windows": {
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
+			},
 			"args": [
 				"flash"
 			],
 			"problemMatcher": [
 				"$gcc"
+			]
+		}
+	],
+	"inputs": [
+		{
+			"id": "board",
+			"type": "promptString",
+			"default": "nrf52840dk_nrf52840",
+			"description": "See https://docs.zephyrproject.org/latest/boards/index.html"
+		},
+		{
+			"id": "pristine",
+			"type": "pickString",
+			"description": "Choose when to run a pristine build",
+			"default": "auto",
+			"options": [
+				"auto",
+				"always",
+				"never"
 			]
 		}
 	]
