@@ -25,12 +25,7 @@
 					"kind": "build",
 					"isDefault": true
 				},
-				"linux": {
-					"command": "${userHome}/zephyrproject/.venv/bin/west"
-				},
-				"windows": {
-					"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
-				},
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west",
 				"args": [
 					"build",
 					"-p",
@@ -40,7 +35,7 @@
 				],
 				"problemMatcher": [
 					"$gcc"
-				]
+				],
 			},
 			{
 				"label": "West Configurable Build",
@@ -48,12 +43,7 @@
 				"group": {
 					"kind": "build",
 				},
-				"linux": {
-					"command": "${userHome}/zephyrproject/.venv/bin/west"
-				},
-				"windows": {
-					"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
-				},
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west",
 				"args": [
 					"build",
 					"-p",
@@ -68,12 +58,7 @@
 			{
 				"label": "West Flash",
 				"type": "shell",
-				"linux": {
-					"command": "${userHome}/zephyrproject/.venv/bin/west"
-				},
-				"windows": {
-					"command": "${userHome}/zephyrproject/.venv/Scripts/west.exe"
-				},
+				"command": "${userHome}/zephyrproject/.venv/Scripts/west",
 				"args": [
 					"flash"
 				],
