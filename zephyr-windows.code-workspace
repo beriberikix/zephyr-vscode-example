@@ -12,9 +12,6 @@
 		"C_Cpp.default.compilerPath": "${userHome}/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe",
 		"C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
 
-		// Python Virtual Environment
-		"python.defaultInterpreterPath": "~/zephyrproject/.venv/Scripts/python.exe",
-
 		// File Associations
 		"files.associations": {}
 	},
@@ -139,7 +136,8 @@
 			"ms-python.python",
 			"ms-vscode.vscode-embedded-tools",
 			"ms-vscode.vscode-serial-monitor",
-			"marus25.cortex-debug"
+			"marus25.cortex-debug",
+			"donjayamanne.python-environment-manager"
 		]
 	}
 }

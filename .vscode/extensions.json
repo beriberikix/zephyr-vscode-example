@@ -4,6 +4,7 @@
         "ms-python.python",
         "ms-vscode.vscode-embedded-tools",
         "ms-vscode.vscode-serial-monitor",
-        "marus25.cortex-debug"
+        "marus25.cortex-debug",
+        "donjayamanne.python-environment-manager"
     ]
 }
