@@ -1,6 +1,6 @@
 # zephyr-vscode-example
 
-This is an example configuration for setting up Visual Studio Code for Zephyr application development. 
+This is an example configuration for setting up Visual Studio Code for Zephyr application development. It was originally created for the talk entitled, "[Zephyr & Visual Studio Code: How to Develop Zephyr Apps with a Modern, Visual IDE](https://youtu.be/IKNHPmG-Qxo)" at EOSS 2023.
 
 ## Example details
 
