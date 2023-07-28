@@ -72,6 +72,40 @@
 			"problemMatcher": [
 				"$gcc"
 			]
+		},
+		{
+			"label": "Start West Debug Server",
+			"type": "shell",
+			"isBackground": true,
+			"command": "west debugserver",
+			"dependsOn": "West Build",
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"problemMatcher": [
+                {
+                    "pattern": [{
+                    "regexp": ".",
+                    "file": 1,"line": 1,
+                    "column": 1,"message": 1
+                    }],
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": { "regexp": "." },
+                        "endsPattern": { "regexp": "." }
+                    },
+                }
+            ]
+		},
+		{
+			"label": "Stop West Debug Server",
+			"command": "echo ${input:terminate west debug server}",
+            "type": "shell"
 		}
 	],
 	"inputs": [
@@ -91,6 +125,12 @@
 				"always",
 				"never"
 			]
+		},
+		{
+			"id": "terminate west debug server",
+			"type": "command",
+			"command": "workbench.action.tasks.terminate",
+			"args": "Start West Debug Server"
 		}
 	]
 }
