@@ -16,14 +16,15 @@ There are many, many different ways to develop a Zephyr application. This exampl
 ## Steps
 
 1. Follow the Zephyr [Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) for your OS and make sure to use virtual environments
-2. Turn on Compilation Database with `west config build.cmake-args -- -DCMAKE_EXPORT_COMPILE_COMMANDS=ON`
-3. Copy the `.code-workspace` for your OS to `samples/basic/thread` as well the `.vscode` folder
-4. Retrieve `ZEPHYR_SDK_INSTALL_DIR` with `cmake -P zephyr/cmake/verify-toolchain.cmake`. It'll be the prefix of the `C_Cpp.default.compilerPath`
-5. Set the `Python: Interpreter Path`
-6. CD to `samples/basic/thread`
-7. Try the different build tasks and the flash task
-8. Try to connect over the serial terminal
-9. TODO try step debugging
+2. Go to your workspace directory `cd ~/zephyrproject`
+3. Turn on Compilation Database with `west config build.cmake-args -- -DCMAKE_EXPORT_COMPILE_COMMANDS=ON`
+4. Copy the `.code-workspace` for your OS to `samples/basic/thread` as well the `.vscode` folder
+5. Retrieve `ZEPHYR_SDK_INSTALL_DIR` with `cmake -P zephyr/cmake/verify-toolchain.cmake`. It'll be the prefix of the `C_Cpp.default.compilerPath`
+6. Set the `Python: Interpreter Path`
+7. CD to `samples/basic/thread`
+8. Try the different build tasks and the flash task
+9. Try to connect over the serial terminal
+10. TODO try step debugging
 
 ## Credits
 
